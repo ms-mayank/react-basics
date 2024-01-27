@@ -1,11 +1,11 @@
-import { useState } from 'react'
+
 import './App.css'
 import Counter from './component/Counter'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Allprojects from './component/Allprojects'
+import Bgcolor from './component/Bgcolor'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter>
@@ -16,8 +16,12 @@ function App() {
       element={<Allprojects/>}
       />
       <Route
-      path='/counter'
+      path='counter'
       element={<Counter/>}
+      />
+      <Route
+      path='bgcolor'
+      element={<Bgcolor/>}
       />
     </Routes>
     
